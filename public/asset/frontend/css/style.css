@@ -1,0 +1,1195 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.btn {
+  background-color: #AFC852;
+  border-color: #AFC852;7AA641
+}
+.btn:hover {
+  background-color: #7AA641;
+  border-color: #7AA641;
+  transition: 1s;
+  color:black;
+}
+/* ===============================================================
+  Starts Top Navbar Styles  (Some styles are used in both navbar)
+==================================================================*/
+
+.nav-top {
+  background: #AFC852;
+  height: 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+.logo span {
+  font-weight: 400;
+}
+
+.nav-top::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.site-nav {
+  position: absolute;
+  top: 235%;
+  left: 0%;
+  background: #464655;
+  margin-top: 5px;
+  -webkit-clip-path: circle(0px at top right);
+  clip-path: circle(0px at top right);
+  transition: -webkit-clip-path ease-in-out 700ms;
+  transition: clip-path ease-in-out 700ms;
+  transition: clip-path ease-in-out 700ms, -webkit-clip-path ease-in-out 700ms;
+  /*   display: none; */
+}
+
+.site-nav--open {
+  -webkit-clip-path: circle(250% at top right);
+  clip-path: circle(250% at top right);
+  position: relative;
+  /*   display: block; */
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  border-bottom: 1px solid #575766;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+.site-nav a {
+  color: white;
+  display: block;
+  padding: 2em 4em 2em 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 3px;
+  font-weight: bold;
+}
+
+.site-nav a:hover, .site-nav a:focus {
+  background: #E4B363;
+  color: gold;
+  transition: 2s;
+}
+
+.site-nav--icon {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-right: 1em;
+  width: 1.1em;
+  text-align: right;
+  color: rgba(255, 255, 255, .4);
+}
+
+.menu-toggle {
+  padding: 1em;
+  top: .5em;
+  right: .5em;
+  cursor: pointer;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: '';
+  display: block;
+  background: white;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  -webkit-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+}
+
+.open .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  -webkit-transform: translateY(-3px) rotate(-90deg);
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+.logo .country {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.logo .country i {
+  font-size: 20px;
+  color: #AFC852;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-top: -4px;
+}
+
+.logo .country .dropdown-select {
+  background: #AFC852;
+  border: 0;
+  margin-top: 5px;
+}
+
+.logo .country .dropdown-select:focus {
+  outline: none;
+}
+
+.logo .country .dropdown-select option {
+  background: #AFC852;
+}
+
+.logo .social-icon li {
+  display: inline-block;
+}
+
+.social-icon {
+  color: #fff;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo ul {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 5px;
+  margin-top: 18px;
+}
+
+.logo ul.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons li {
+  vertical-align: top;
+  display: inline;
+  height: 100px;
+}
+
+.social-icons a {
+  color: green;
+  text-decoration: none;
+}
+
+.fa-facebook-f {
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-right: 10px;
+}
+
+.fa-facebook-f:hover {
+  color: #AFC852;
+  transition: 1s;
+}
+
+.fa-twitter {
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-right: 10px;
+}
+
+.fa-twitter:hover {
+  color: #AFC852;
+  transition: 1s;
+}
+
+.fa-youtube {
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-right: 10px;
+}
+
+.fa-youtube:hover {
+  color: #AFC852;
+  transition: 1s;
+}
+
+.fa-envelope {
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-right: 10px;
+}
+
+.fa-envelope:hover {
+  color: #AFC852;
+  transition: 1s;
+}
+
+.fa-linkedin-in {
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-right: 10px;
+}
+
+.fa-linkedin-in:hover {
+  color: #AFC852;
+  transition: 1s;
+}
+
+.fa-mobile-alt {
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-right: 10px;
+}
+
+.fa-mobile-alt:hover {
+  color: #AFC852;
+  transition: 1s;
+}
+
+/* =========================================================
+      End of Top Navbar Styles
+============================================================ */
+
+/* =========================================================
+      Starts bottom Navbar Styles
+============================================================ */
+
+.container-bottom {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.nav-bottom {
+  background: black;
+  color: #EBEBD3;
+  position: relative;
+}
+
+.nav-bottom::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.logo-bottom {
+  float: left;
+}
+
+.logo-bottom img {
+  width: 60px;
+  height: 60px;
+}
+
+.site-nav-bottom {
+  position: absolute;
+  right: 0%;
+  background: #464655;
+  -webkit-clip-path: circle(0px at top right);
+  clip-path: circle(0px at top right);
+  transition: -webkit-clip-path ease-in-out 700ms;
+  transition: clip-path ease-in-out 700ms;
+  transition: clip-path ease-in-out 700ms, -webkit-clip-path ease-in-out 700ms;
+  /*   display: none; */
+}
+
+.site-nav-bottom--open {
+  -webkit-clip-path: circle(250% at top right);
+  clip-path: circle(250% at top right);
+  position: relative;
+  /*   display: block; */
+}
+
+.site-nav-bottom ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav-bottom li {
+  border-bottom: 1px solid #575766;
+}
+
+.site-nav-bottom li:last-child {
+  border-bottom: none;
+}
+
+.site-nav-bottom a {
+  color: white;
+  display: block;
+  padding: 1em 4em 2em 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-nav-bottom a:hover, .site-nav-bottom a:focus {
+  background: #E4B363;
+  color: #AFC852;
+  transition: 2s;
+}
+
+.site-nav-bottom--icon {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-right: 1em;
+  width: 1.1em;
+  text-align: right;
+  color: rgba(255, 255, 255, .4);
+}
+
+.menu-toggle-bottom {
+  padding: 1em;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  cursor: pointer;
+  padding-top: 25px;
+}
+
+.hamburger-bottom, .hamburger-bottom::before, .hamburger-bottom::after {
+  content: '';
+  display: block;
+  background: white;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger-bottom::before {
+  -webkit-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
+
+.hamburger-bottom::after {
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+}
+
+.open .hamburger-bottom {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.open .hamburger-bottom::before {
+  opacity: 0;
+}
+
+.open .hamburger-bottom::after {
+  -webkit-transform: translateY(-3px) rotate(-90deg);
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+/* =========================================================
+      End of botttom Navbar Styles
+============================================================ */
+
+/* ===========================================================
+  Starts Home page style
+============================================================== */
+
+#home-image {
+  background-image: url(../img/home-image.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.home-article {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+
+#video-section {
+  background: #BDBFBC;
+}
+
+#contact {
+   background: #304355;
+   color: white;
+}
+
+#contact h1{
+   color: white;
+}
+
+#contact .btn {
+  padding: 20px;
+  color: white;
+  border-color: white;
+  transition: 1s;
+}
+
+.vdo-fluid {
+  height: 400px;
+}
+
+.fotter-line{
+  height: 10px;
+  background-color: #AFC852;
+}
+
+/* ==Home Page Scroll Down Button== */
+#section06 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.demo a {
+  position: absolute;
+  top: 60%;
+  left: 50.5%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+#section06 a span {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section06 a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+#section06 a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 3s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ===========================================================
+  End of Home page style
+============================================================== */
+
+/* ===========================================================
+  Starts Both Financial-academy and Online-Course page style
+============================================================== */
+
+#online-course {
+  background-image: url(../img/course.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  color: black;
+}
+
+#online-course-1 {
+  background-image: url(../img/course-h.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  color: black;
+}
+
+#online-course .btn {
+  font-weight: bold;
+  padding: .375rem 4.75rem;
+}
+
+#online-trading-course .card {
+  cursor: pointer;
+}
+
+#online-trading-course .container-fluid {
+  width: 90%;
+}
+
+/* ===========================================================
+  End of Both Financial-academy and Online-Course page style
+============================================================== */
+
+
+
+/* =========================================================
+      Starts About Us page style
+============================================================ */
+
+#values {
+  background-image: url(../img/values.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+#values .card {
+  background-color: #304355 !important;
+  border: 0;
+  border-radius: 0;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  /*margin-top: 130px;*/
+}
+
+#values .card .btn a {
+  text-decoration: none;
+}
+
+.values-font {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+#values-bottom {
+  background-color: #ECEFF2;
+}
+
+.ruler {
+  background-color: black;
+}
+
+/*Starts testimonial Section Style*/
+
+.main-gallery {
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  border-top: solid 10px #7AA641;
+}
+
+.gallery-cell {
+  width: 100%;
+}
+
+.testimonial {
+  text-align: center;
+  max-width: 850px;
+  margin: 30px auto 130px auto;
+  padding: 0 20px;
+}
+
+.testimonial-avatar {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.testimonial-quote {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 10px 0;
+}
+
+.testimonial-author {
+  display: block;
+  font-weight: 800;
+  color: #7AA641;
+}
+
+.flickity-page-dots {
+  bottom: 25px;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: #7AA641;
+}
+
+/*End of testimonial Section Style*/
+
+/* =========================================================
+      End of About Us page style
+============================================================ */
+
+/* ===========================================================
+  Starts Investment page style
+============================================================== */
+
+#investment-image {
+  background-image: url(../img/investment-img.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.invest-article {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#investment .navbar{
+  border-bottom: 5px solid #AFC852;
+  background: black;
+  opacity: 0.8;
+}
+
+
+#investment .btn{
+  margin-right: 10px;
+  margin-bottom: 5px;
+  line-height: 1rem;
+  border-color: #AFC852;
+  color: black;
+}
+#investment .btn:hover{
+  background-color: #7AA641;
+  color: black;
+}
+
+
+#accordion h6,
+#accordion-2 h6,
+#accordion-3 h6,
+#accordion-4 h6,
+#accordion-5 h6,
+#accordion-6 h6,
+#accordion-7 h6,
+#accordion-8 h6,
+#accordion-9 h6,
+#accordion-10 h6,
+#accordion-11 h6{
+  color: #AFC852 !important;
+}
+
+
+
+
+table, th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+#market-details {
+  background-color: #ECEFF2;
+}
+
+.tbl {
+  background: white;
+}
+
+#market-details hr, #market-details-1 hr {
+  background-color: black;
+}
+
+#invest-bottom .btn {
+  padding: 20px 35px;
+  font-weight: bold;
+}
+
+/* ===========================================================
+  End of  Investment page style
+============================================================== */
+
+#blog-page {
+  background-color: #281517;
+}
+
+#blog-page a {
+  text-decoration: none;
+  color: black;
+}
+
+.blog-left {
+  background-color: white;
+}
+
+
+.blog-left h4:hover {
+  color: #7AA641;
+}
+
+.call-section {
+  background-color: #7AA641;
+  padding: 30px;
+  color: white;
+}
+
+.blog-right {
+  background-color: #F8F8F8;
+}
+
+.blog-right-wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.blog-right h4:hover,.blog-right h6:hover {
+  color: #7AA641;
+}
+
+.suggested-blog img {
+  margin-top: 5px;
+}
+/* ===========================================================
+  Starts Financial Planning section style
+============================================================== */
+
+.img-btm{
+  font-size: 30px;
+}
+
+.img-btm:hover{
+  color: #7AA641;
+}
+
+
+
+
+/* ===========================================================
+  End of Financial Planning section style
+============================================================== */
+
+
+
+
+/* ===========================================================
+  Starts fotter section style
+============================================================== */
+
+footer {
+  background-color: black;
+  font-size: 15px;
+}
+
+.footer-left, .footer-right {
+  padding-top: 5px;
+  text-align: center;
+}
+
+.footer-left .btn{
+  padding: 2px;
+  margin-top: 10px;
+}
+
+.footer-right{
+  margin-top: 13px;
+  color: #AFC852;
+}
+
+.footer-right p{
+  color: #AFC852;
+}
+
+.footer-left {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+}
+
+.footer-left li:first-child {
+  margin-left: 0px;
+}
+
+.footer-left li {
+  display: inline-block;
+  margin-left: 20px;
+  list-style: none;
+}
+
+.footer-left li a:link, .footer-left li a:visited, .footer-right li a:link, .footer-right li a:visited {
+  text-decoration: none;
+  color: #444444;
+  transition: color 0.3s;
+}
+
+.footer-left li a:hover, .footer-left li a:active {
+  color: #e8e8e8;
+}
+
+.footer-left::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+.center {
+  text-align: center;
+  color: #444444;
+  font-family: 'Oswald', sans-serif;
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+
+}
+/* ===========================================================
+  End of fotter section style
+============================================================== */
+
+/* ===========================================================
+  Starts return-to-top button style
+============================================================== */
+
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
+}
+
+/* ===========================================================
+      End of return-to-top button style
+============================================================== */
+
+
+
+
+
+
+
+
+
+/* =========================================================
+      Starts Preloader style
+============================================================ */
+
+.A {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/* ===========================================================
+      End of Preloader style
+============================================================== */
+
+/* ===========================================================
+      Responsive navbar and other things with media query
+============================================================== */
+
+@media (min-width: 1200px) {
+  .menu-toggle-bottom {
+    display: none;
+  }
+  .site-nav-bottom {
+    height: auto;
+    text-align: center;
+    position: relative;
+    background: transparent;
+    float: ;
+    -webkit-clip-path: initial;
+    clip-path: initial;
+  }
+  .site-nav-bottom li {
+    display: inline-block;
+    border: none;
+  }
+  .site-nav-bottom a {
+    font-size: 15px;
+    line-height: 16px;
+    padding: 20px 5px 15px;
+    ;
+    font-weight: bold;
+  }
+  .site-nav-bottom a:hover, .site-nav-bottom a:focus {
+    background: transparent;
+  }
+  .site-nav-bottom--icon {
+    display: none;
+  }
+}
+
+@media (min-width: 750px) {
+  .menu-toggle {
+    display: none;
+  }
+  .site-nav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: left;
+    -webkit-clip-path: initial;
+    clip-path: initial;
+  }
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+  .site-nav a {
+    padding: 0;
+    margin-left: 1em;
+  }
+  .site-nav ul li:first-child {
+    margin-left: 0;
+  }
+  .site-nav a:hover, .site-nav a:focus {
+    background: transparent;
+  }
+  .site-nav--icon {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .pln .btn{
+    font-size: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 575px) {
+  #blog-page h4,
+  #blog-page h1 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 525px) {
+  table, th, td {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .social-icon {
+    display: none;
+  }
+  #home-image h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-left li {
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  .footer-right li {
+    margin-left: 10px;
+  }
+  #blog-page h1,
+  #blog-page h4, p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 370px) {
+  table, th, td {
+    padding: 0px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-left li {
+    margin-left: 5px;
+  }
+  .footer-right li {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 318px) {
+  .footer-left li {
+    margin-left: 5px;
+  }
+  .footer-right li {
+    margin-left: 5px;
+  }
+  .footer-right li a i {
+    color: #444444;
+    font-size: 1em;
+  }
+}
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
