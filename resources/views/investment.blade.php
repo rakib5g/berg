@@ -1625,14 +1625,15 @@
             <button class="close text-light" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
-            <form action="">
+            <form action="{{ route('contactus') }}" method="POST">
+                @csrf
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" class="form-control">
+                <input type="text" id="name" name="name" class="form-control">
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" class="form-control">
+                <input type="email" id="email" name="email" class="form-control">
               </div>
               <div class="form-group">
                 <label for="message">Message</label>

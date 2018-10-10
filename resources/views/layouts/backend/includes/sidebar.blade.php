@@ -59,6 +59,12 @@
                         <span class="pull-right-container"> </span>
                     </a>
                 </li>
+                <li class="{{ Request::is('admin/contactus*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.contactus.index') }}">
+                        <i class="fa fa-envalope text-blue"></i> Messages
+                        <span class="pull-right-container"> </span>
+                    </a>
+                </li>
 
                 <li class="header">SYSTEM</li>
 

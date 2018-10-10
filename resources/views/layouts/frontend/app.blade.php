@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="{{ asset('asset/frontend/css/animate.min.css') }}">
     <!-- Main-css -->
     <link rel="stylesheet" href="{{ asset('asset/frontend/css/style.css') }}">
+     <!--Toastr js-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
     @stack('css')
 </head>
 <body>
@@ -62,6 +64,19 @@
   <script src="{{ asset('asset/frontend/js/wow.min.js') }}"></script>
   <!--main js file-->
   <script src="{{ asset('asset/frontend/js/index.js') }}"></script>
+  <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+{!! Toastr::message() !!}
+
+<script type="text/javascript">
+    @if($errors->any())
+    @foreach($errors->all() as $error)
+    toastr.warning('{{ $error }}', 'Error', {
+        closeButton: true,
+        progressbar: true,
+    });
+    @endforeach
+    @endif
+</script>
 @stack('script')
 </body>
 </html>

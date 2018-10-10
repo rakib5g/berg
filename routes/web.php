@@ -23,6 +23,7 @@ Route::get('blog-post-details/{id}', 'BlogPostController@detailsPost')->name('de
 Route::get('financial-planning', 'financialPlanningController@index')->name('financialPlanning');
 Route::get('financial-academy', 'financialAcademyController@index')->name('financialAcademy');
 Route::get('investment', 'investmentController@index')->name('investment');
+Route::post('contactus', 'ContactUsController@contactus')->name('contactus');
 
 Auth::routes();
 
@@ -37,6 +38,7 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
     Route::resource('blogPost', 'BlogPostController');
     Route::resource('financialAcademy', 'financialAcademyController');
     Route::resource('financialplanning', 'financialPlanningController');
+    Route::resource('contactus', 'ContactusController');
 
     Route::get('social', 'SocialController@index')->name('social');
     Route::put('social-update/{id}', 'SocialController@update')->name('social.update');
